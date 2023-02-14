@@ -1,3 +1,10 @@
 nav {
-
+    width: 100%;
+    scroll-behavior: smooth;
+    background-color: slategray;
+}
+nav.ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
