@@ -1,0 +1,55 @@
+.navbar {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: slategray;
+}
+
+.navbar ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    height: inherit;
+    top: 0;
+}
+
+.navbar li {
+    display: inline;
+    list-style-type: none;
+    padding: 5px;
+    height: 25px;
+    position: relative;
+    transform-origin: initial;
+    transform: translate(-30%, -5px);
+}
+
+.navbar a {
+    color: azure;
+}
+
+.navbar a:hover {
+    color: darkslategrey;
+    transition-duration: 0.5s;
+}
+
+body {
+    position: relative;
+    top: 50px;
+}
+
+.splash-screen {
+    height: calc(100% - 50px);
+}
+
+.article {
+    height: 100%;
+}
+
+.progress-bar {
+    position: fixed;
+    bottom: 0;
+    height: 5px;
+    color: aqua;
+}
