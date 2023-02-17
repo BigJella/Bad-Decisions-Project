@@ -5,8 +5,8 @@ function scrollbar() {
     let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     let scrolled = (winScroll / height) * 100;
-    if (scrolled < 1) {
-        document.getElementById("scroll-indicator").style.width = 1 + "%";
+    if (scrolled < 0.1) {
+        document.getElementById("scroll-indicator").style.width = 0.1 + "%";
     } else {
         document.getElementById("scroll-indicator").style.width = scrolled + "%";
     }

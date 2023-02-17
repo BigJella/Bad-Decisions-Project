@@ -1,63 +1,68 @@
-$ani-speed: 2s;
-$ani-delay: 1s;
+$base: 8px;
 
-.arrow-wrapper {
-  background: #222;
-  width: 100px;
-  height: 100px;
-}
-
-.arrow {
-  opacity: 0;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform-origin: 50% 50%;
-  transform: translate3d(-50%, -50%, 0);
-  color: #ff0000;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50px;
   height: 50px;
 }
 
-.arrow-first {
-  animation: arrow-movement $ani-speed ease-in-out infinite;
-}
-.arrow-second {
-  animation: arrow-movement $ani-speed $ani-delay ease-in-out infinite;
+.chevron {
+  position: absolute;
+  width: $base * 3.5;
+  height: $base * 0.8;
+  opacity: 0;
+  transform: scale(0.3);
+  animation: move-chevron 3s ease-out infinite;
+
 }
 
-.arrow:before,
-.arrow:after {
-  background: #fff;
+.chevron:first-child {
+  animation: move-chevron 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move-chevron 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
   content: '';
-  display: block;
-  height: 3px;
   position: absolute;
   top: 0;
+  height: 100%;
+  width: 50%;
+  background: orange;
+}
+
+.chevron:before {
   left: 0;
-  width: 30px;
+  transform: skewY(30deg);
+  border: solid brown;
 }
 
-.arrow:before {
-  transform: rotate(45deg) translateX(-23%);
-  transform-origin: top left;
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skewY(-30deg);
+  border: solid firebrick;
 }
 
-.arrow:after {
-  transform: rotate(-45deg) translateX(23%);
-  transform-origin: top right;
-}
-
-// Animation
-@keyframes arrow-movement {
-  0% {
-    opacity: 0;
-    top: 45%;
-  }
-  70% {
+@keyframes move-chevron {
+  25% {
     opacity: 1;
+  }
+  33.3% {
+    opacity: 1;
+    transform: translateY(15px);
+  }
+  66.6% {
+    opacity: 1;
+    transform: translateY(30px);
   }
   100% {
     opacity: 0;
+    transform: translateY(45px) scale(0.5);
   }
 }
