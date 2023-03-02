@@ -1,7 +1,11 @@
 # Default ignored files
 /shelf/
 /.idea/workspace.xml
+
 # Editor-based HTTP Client requests
 /httpRequests/
 /.idea/vcs.xml
 /.idea/watcherTasks.xml
+
+# node_modules folder
+/node_modules
