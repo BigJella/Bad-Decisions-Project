@@ -49,7 +49,7 @@
     top: 25%;
     left: 0;
     height: 50%;
-    width: 49%;
+    width: 50%;
     background: var(--secondary-accent);
     transform: skew(0deg, 50deg);
 }
@@ -60,7 +60,7 @@
     top: 25%;
     right: 0;
     height: 50%;
-    width: 51%;
+    width: 50%;
     background: var(--secondary-accent);
     transform: skew(0deg, -50deg);
 }
