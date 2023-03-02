@@ -1,0 +1,92 @@
+@import "../node_modules/animate.css/animate.css";
+:root {
+    --primary-color: #222831;
+    --primary-accent: #eeeeee;
+    --secondary-color: #353b42;
+    --secondary-accent: #0092ca;
+    --border-color: #666
+}
+
+#chevron-box {
+    position: absolute;
+    bottom: 15px;
+    display: flex;
+    animation-duration: 10s;
+    width: 100%;
+    justify-content: center;
+}
+
+#chevron-wrapper > a {
+    display: flex;
+    justify-self: center;
+}
+
+#inner-wrapper {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: var(--border-color) solid;
+}
+
+#chevron {
+    position: relative;
+    align-self: center;
+    height: 50%;
+    width: 50%;
+    top: 0;
+    padding: 5%;
+    margin: 0;
+    animation: float 3s ease-in-out 5s infinite;
+}
+
+#chevron:before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: 0;
+    height: 50%;
+    width: 49%;
+    background: var(--secondary-accent);
+    transform: skew(0deg, 50deg);
+}
+
+#chevron:after {
+    content: '';
+    position: absolute;
+    top: 25%;
+    right: 0;
+    height: 50%;
+    width: 51%;
+    background: var(--secondary-accent);
+    transform: skew(0deg, -50deg);
+}
+
+@keyframes float {
+    0% {
+        top: 0;
+    }
+
+    20% {
+        top: 10%;
+    }
+
+    40% {
+        top: 0;
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+    55% {
+        opacity: 0.5;
+    }
+
+    65% {
+        opacity: 1;
+    }
+}

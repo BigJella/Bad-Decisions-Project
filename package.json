@@ -1,0 +1,22 @@
+{
+  "name": "bad-decisions-project",
+  "version": "1.0.0",
+  "description": "A simple one page interactive website I made for a literature class project.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BigJella/Bad-Decisions-Project.git"
+  },
+  "author": "Yusuf Abdulahi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BigJella/Bad-Decisions-Project/issues"
+  },
+  "homepage": "https://github.com/BigJella/Bad-Decisions-Project#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1"
+  }
+}
