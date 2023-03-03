@@ -11,3 +11,17 @@ function scrollbar() {
         document.getElementById("scroll-indicator").style.width = scrolled + "%";
     }
 }
+
+function myScrollFunc() {
+    let myID = document.getElementById("return-arrow");
+    let windowHeight = document.documentElement.clientHeight
+    let y = window.scrollY;
+    if (y > ((windowHeight/4) - 52)) {
+        myID.className = "cta show"
+        document.getElementById("return-link").setAttribute("href", "#splash-screen");
+    } else {
+        myID.className = "cta hide"
+        document.getElementById("return-link").removeAttribute("href");
+    }
+}
+window.addEventListener("scroll", myScrollFunc);
