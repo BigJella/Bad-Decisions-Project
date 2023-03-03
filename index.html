@@ -21,11 +21,18 @@
     <body>
         <main>
             <header id="splash-screen"> <!-- First thing you see with background image and title -->
-                <div class="splash-text"> <!--TODO: Set background image and make it look fancy-->
-                    <h1>Galaxy Note Kaboom</h1>
-                    <p>hi</p>
+                <div id="video-wrapper">
+                    <video autoplay muted loop id="background-video">
+                        <source src="assets/Bad_Decisions_Website_Homepage.mp4" type="video/mp4">
+                    </video>
                 </div>
-                <div id="chevron-box">
+                <div id="video-cover"></div>
+                <div id="header-content">
+                    <div class="splash-text">
+                        <h1>Galaxy Note Kaboom</h1>
+                        <p>hi</p>
+                    </div>
+                    <div id="chevron-box">
                         <div id="chevron-wrapper">
                             <a href="#article-1">
                                 <div id="inner-wrapper">
@@ -33,7 +40,9 @@
                                 </div>
                             </a>
                         </div>
+                    </div>
                 </div>
+
             </header>
 
             <article class="article" id="article-1"> <!-- Section under main title with background info -->
