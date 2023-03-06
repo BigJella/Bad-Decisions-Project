@@ -14,22 +14,18 @@
     animation-duration: 10s;
     width: 100%;
     justify-content: center;
+    z-index: 1;
 }
 
-#chevron-wrapper > a {
-    display: flex;
-    justify-self: center;
-}
-
-#inner-wrapper {
+#chevron-wrapper {
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 4rem;
+    height: 4rem;
     background-color: var(--secondary-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    border: var(--border-color) solid;
+    border: var(--border-color) solid 2px;
 }
 
 #chevron {
@@ -38,7 +34,6 @@
     height: 50%;
     width: 50%;
     top: 0;
-    padding: 5%;
     margin: 0;
     animation: float 3s ease-in-out 5s infinite;
 }
@@ -48,6 +43,8 @@
     position: absolute;
     top: 25%;
     left: 0;
+    /*noinspection CssNonIntegerLengthInPixels*/
+    margin-left: 0.1px;
     height: 50%;
     width: 50%;
     background: var(--secondary-accent);
@@ -59,9 +56,11 @@
     position: absolute;
     top: 25%;
     right: 0;
+    /*noinspection CssNonIntegerLengthInPixels*/
+    margin-right: 0.1px;
     height: 50%;
     width: 50%;
-    background: var(--secondary-accent);
+    background: #007096;
     transform: skew(0deg, -50deg);
 }
 
