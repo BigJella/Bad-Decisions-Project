@@ -13,8 +13,8 @@
     </head>
     <nav id="navbar"> <!--Took so long to get right... damn navigation bar-->
         <ul>
-            <li><a href="#splash-screen">Home</a></li>
-            <li><a href="#intro-wrapper">Background Information</a></li>
+            <li><a href="#splash-screen" id="home-link">Home</a></li>
+            <li><a href="javascript:void(0);" id="intro-link">Background Information</a></li>
             <li><a href="#article-1">The Decision</a></li> <!-- <- Just required questions from rubric -->
             <li><a href="#works-cited">Works Cited</a></li>
         </ul>
@@ -117,12 +117,16 @@
                 </article>
             </main>
             <footer>
-                <div id="actual-stuff">
-                    <p id="p1">Made by Yusuf Abdulahi</p>
-                    <p id="p2">Looking for the <a href="https://github.com/BigJella/Bad-Decisions-Project" target="_blank">source code</a>?</p>
+                <div id="actual-container">
+                    <div id="actual-stuff">
+                        <p id="p1">Made by Yusuf Abdulahi</p>
+                        <p id="p2">Looking for the <a href="https://github.com/BigJella/Bad-Decisions-Project" target="_blank">source code</a>?</p>
+                    </div>
                 </div>
                 <a id="return-link">
-                    <div class="cta hide" id="return-arrow"></div>
+                    <div class="cta hide" id="return-arrow">
+                        <div class="gg-chevron-up"></div>
+                    </div>
                 </a>
                 <div id="scroll-indicator"></div>
             </footer>

@@ -383,6 +383,21 @@ footer {
     opacity: 0 !important;
 }
 
+#return-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gg-chevron-up {
+    content: "";
+    width: 30%;
+    height: 30%;
+    border-right: 5px solid;
+    border-top: 5px solid;
+    transform: rotate(-45deg);
+}
+
 #scroll-indicator {
     position: fixed;
     bottom: 0;

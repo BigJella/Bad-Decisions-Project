@@ -7,8 +7,28 @@ window.onscroll = updateSite;
 window.onresize = updateSite;
 ScreenOrientation.onChange = updateSite;
 
-// When the user clicks the return arrow, execute setScrollingToTop
-document.getElementById("return-link").onclick = setScrollingToTop;
+// When the user clicks the return arrow or home link in nav when close to the top, show animation; otherwise don't
+document.getElementById("return-link").addEventListener("click",(event) => {
+    if (scrolled >= 3 * viewHeight) {
+        setScrollingToTop();
+        document.documentElement.scrollTop = 0;
+        event.preventDefault();
+    } else {
+        document.documentElement.scrollTop = 0;
+        event.preventDefault();
+    }
+});
+document.getElementById("home-link").addEventListener("click",(event) => {
+    if (scrolled >= 3 * viewHeight) {
+        setScrollingToTop();
+        document.documentElement.scrollTop = 0;
+        event.preventDefault();
+    } else {
+        document.documentElement.scrollTop = 0;
+        event.preventDefault();
+    }
+});
+document.getElementById("intro-link").onclick = () => document.documentElement.scrollTop = viewHeight + 1;
 
 // Variable to track whether the user has triggered the return arrow yet
 let shownBefore = false;
@@ -85,7 +105,7 @@ function updateSite() {
         introText.style.transition = "width 500ms 150ms ease-in";
 
         // Show intro content after scrolling enough
-        if (!scrollingToTop && scrolled >= (1 * viewHeight)) {
+        if (!scrollingToTop && scrolled >= viewHeight) {
 
             introContent.querySelector("h2").style.opacity = "1";
             introContent.querySelector("h2").className = "animate__animated animate__fadeInDown";
