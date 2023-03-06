@@ -3,69 +3,129 @@
     <head>
         <meta charset="UTF-8">
         <title>Exploding Samsungs</title>
-        <link rel="stylesheet" href="styles/styles.css"> <!-- One stylesheet for everything... Sigh -->
-        <link rel="stylesheet" href="styles/arrow_animation.css">
-        <script src="scripts/main.js"></script> <!-- I don't know JS but just in case for animation -->
+        <link href="styles/styles.css" rel="stylesheet"> <!-- One stylesheet for everything... Sigh -->
+        <link href="styles/arrow_animation.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+        <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <script async src="node_modules/jquery/dist/jquery.js"></script>
+        <script defer src="scripts/main.js"></script>
     </head>
-    <nav class="navbar"> <!--Took so long to get right... damn navigation bar-->
+    <nav id="navbar"> <!--Took so long to get right... damn navigation bar-->
         <ul>
             <li><a href="#splash-screen">Home</a></li>
-            <li><a href="index.html">Background Information</a></li>
-            <li><a href="">The Decision</a></li> <!-- <- Just required questions from rubric -->
+            <li><a href="#intro-wrapper">Background Information</a></li>
+            <li><a href="#article-1">The Decision</a></li> <!-- <- Just required questions from rubric -->
             <li><a href="#works-cited">Works Cited</a></li>
         </ul>
     </nav>
     <body>
-        <main>
             <header id="splash-screen"> <!-- First thing you see with background image and title -->
-                <div class="splash-text"> <!--TODO: Set background image and make it look fancy-->
-                    <h1>Galaxy Note Kaboom</h1>
-                    <p>hi</p>
-                </div>
-                <div id="chevron-box">
-                        <div id="chevron-wrapper">
-                            <a href="#article-1">
-                                <div id="inner-wrapper">
-                                    <div id="chevron"></div>
-                                </div>
-                            </a>
+                <div id="header-content">
+                    <div id="video-wrapper">
+                        <video autoplay id="background-video" loop muted>
+                            <source src="assets/videos/Bad_Decisions_Website_Homepage.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div id="video-cover"></div>
+                    <div id="header-main-content">
+                        <div id="splash-text">
+                            <div class="title-wrapper">
+                                <h1 class="typewriter" id="title-line-one">Samsung Galaxy...</h1>
+                            </div>
+                            <div class="title-wrapper">
+                                <h1 class="typewriter" id="title-line-two">Goes Kaboom</h1>
+                            </div>
                         </div>
+                        <div id="intro-wrapper">
+                            <div id="intro-content">
+                                <h2 id="sub-heading">
+                                    Introduction
+                                </h2>
+                                <p id="intro-para">In 2016, Samsung, one of the world's largest electronics manufacturers, faced a major crisis when reports emerged that some of their Galaxy smartphones were spontaneously exploding or catching fire. The news spread rapidly, causing widespread panic and concern among Samsung's customers and safety regulators around the world. As the scale of the problem became clear, Samsung was forced to issue a global recall of millions of devices and halt production of the affected devices. The incident caused significant damage to Samsung's reputation and raised important questions about the safety and reliability of modern electronics.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="chevron-box">
+                        <a href="#article-1">
+                            <div id="chevron-wrapper">
+                                <div id="chevron"></div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </header>
 
-            <article class="article" id="article-1"> <!-- Section under main title with background info -->
-                ok there
-                <div class="main-text" id="article-1-text"> <!--TODO: Add content to article 1-->
-                    <p>hello</p>
-                </div>
-            </article>
+            <main>
+                <article class="article" id="article-1"> <!-- Section under main title with background info -->
+                    <div class="flex-wrapper">
+                        <figure class="image" id="article-1-image">
+                            <img alt="Samsung Broken Battery Fire" src="assets/images/Samsung%20Battery%20Fire.jpg">
+                            <figcaption>Figure I. A malfunctioning Samsung battery that has heated up and blown apart.</figcaption>
+                        </figure>
+                        <div class="main-text" id="article-1-text">
+                            <h2>What was the decision?</h2>
+                            <p>The root cause of the Samsung Galaxy phone explosions was traced back to a faulty battery design. Samsung had sourced batteries from two different suppliers, and opted for a thinner design to fit inside the slimmer profile of the Galaxy phones. However, there wasn't enough space between the batteries and the internals, causing the battery to short-circuit, overheating, and occasionally catch fire and explode. Despite reports of these issues, however, Samsung continued to use it in their devices, leading to what can only be called a catastrophe. According to 9to5mac, the company later admitted to rushing the production of the phone and skipping some safety tests, which could have potentially caught the issue before it reached consumers. The website states, "They pushed suppliers to meet tighter deadlines, despite loads of new features, another person with direct knowledge said." This decision to prioritize design and production speed over safety led to a significant setback for Samsung, both financially and reputation-wise.</p>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="article" id="article-2"> <!-- Next section elaborating on previous section -->
-                <div class="main-text" id="article-2-text"> <!--TODO: Add content to article 2-->
-                    <p></p>
-                </div>
-            </article>
+                <article class="article" id="article-2"> <!-- Next section elaborating on previous section -->
+                    <div class="flex-wrapper">
+                        <figure class="image" id="article-2-image">
+                            <img alt="A samsung that exploded while charging." src="assets/images/Portrait%20Burnt%20Samsung.jpg">
+                            <figcaption>Figure II. A Samsung device that has exploded while charging</figcaption>
+                        </figure>
+                        <div class="main-text" id="article-2-text">
+                            <h2>What were the consequences of this decision?</h2>
+                            <p>The consequences of Samsung's decision to use a faulty battery design were significant. The incidents of exploding phones caused injuries to several customers, which resulted in lawsuits against the company. Samsung had to issue the largest phone recall in history, totalling 2.5 million devices that cost the company billions of dollars. According to the New York Post, "The company was forced to recall all 2.5 million of its Galaxy Note 7s after a flurry of consumers reported injuries from exploding phones." The negative publicity damaged Samsung's reputation, leading to a loss of customer trust and market share. The incident also raised concerns among regulators and industry experts about the safety of lithium-ion batteries, which are widely used in electronic devices. The company's stock price took a significant hit, and it took Samsung several years to regain the trust of customers and investors. Overall, the consequences of the decision to use a faulty battery design were severe and demonstrated the importance of prioritizing safety in the manufacturing process.</p>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="article" id="article-3"> <!-- Final section summarizing the issue -->
-                <div class="main-text" id="article-3-text"> <!--TODO: Add content to article 3-->
-                    <p></p>
-                </div>
-            </article>
+                <article class="article" id="article-3"> <!-- Final section summarizing the issue -->
+                    <div class="flex-wrapper">
+                        <figure class="image" id="article-3-image">
+                            <img alt="Samsung's 8-point battery safety check" src="assets/images/8%20Point%20Battery%20Safety%20Check.jpg">
+                            <figcaption>Figure III. The procedure used to ensure the safety of future batteries</figcaption>
+                        </figure>
+                        <div class="main-text" id="article-3-text">
+                            <h2>Future Precautions</h2>
+                            <p>Following the Galaxy phone explosions, Samsung took several steps to prevent similar incidents from happening again. The company introduced an eight-point safety check process that includes the testing of battery durability, charging, and storage safety. According to Samsung themselves, "...[We've] developed this 8-Point Battery Safety Check. It involves putting our batteries through extreme testing, inside and out...". Additionally, the company revamped its quality control system to improve safety standards and ensure that devices meet global safety regulations. Samsung has also made significant investments in developing safer battery technologies, such as solid-state batteries that are less prone to overheating and explosions. Overall, Samsung's response to the Galaxy phone explosions were quick and satisfactory.</p>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="article" id="works-cited">
-                <div class="main-text" id="cited-wrapper">
-                    <cite>HI</cite>
-                </div>
-            </article>
-        </main>
+                <article class="article" id="works-cited">
+                    <div class="main-text" id="cited-wrapper">
+                        <h3>Works Cited</h3>
+                        <cite>“Comment: Can We Stop Freaking out Every Time a Samsung Phone Explodes?” Google, Google, https://9to5google.com/2016/12/21/comment-can-we-stop-freaking-out-every-time-a-samsung-phone-explodes/.</cite>
+                        <cite>Lovejoy, Ben. “Samsung's Exploding Phones the Result of a Rush to Beat the 'Dull' Iphone 7 to Market – Bloomberg.” 9to5Mac, 19 Sept. 2016, https://9to5mac.com/2016/09/19/samsung-note-7-iphone-7/.</cite>
+                        <cite>Moynihan, Tim. “Samsung Finally Reveals Why the Note 7 Kept Exploding.” Wired, Conde Nast, 23 Jan. 2017, https://www.wired.com/2017/01/why-the-samsung-galaxy-note-7-kept-exploding/.</cite>
+                        <cite>Newsroom, Samsung U.S. “[Infographic] Galaxy note7: 8-Point Battery Check and Multi-Layer Safety Measures.” Samsung US Newsroom, Samsung Newsroom US, 18 June 2019, https://news.samsung.com/us/infographic-galaxy-note7-8-point-battery-check-multi-layer-safety-measures/.</cite>
+                        <cite>Report, Post Staff. “Samsung Finally Figures out Why Its Phones Kept Exploding.” New York Post, New York Post, 20 Jan. 2017, https://nypost.com/2017/01/20/samsung-finally-figures-out-why-its-phones-kept-exploding/.</cite>
+                        <cite>“Samsung Confirms Battery Faults as Cause of Note 7 Fires.” BBC News, BBC, 23 Jan. 2017, https://www.bbc.com/news/business-38714461.</cite>
+                        <cite>“Samsung Finally Explains The Galaxy Note 7 Exploding Battery Mess.” NBCNews.com, NBCUniversal News Group, 23 Jan. 2017, https://www.nbcnews.com/tech/tech-news/samsung-finally-explains-galaxy-note-7-exploding-battery-mess-n710581.</cite>
+                        <cite>“Samsung SDI, Began Construction of the Solid-State Battery’s Pilot Line.” Samsung SDI, 14 Mar. 2022, https://www.samsungsdi.com/sdi-news/2602.html.</cite>
+                        <cite>Wong, Raymond. “It's Time for Samsung to Explain What the Hell Is Wrong with the note7.” Mashable, Mashable, 29 Oct. 2021, https://mashable.com/article/samsung-needs-explain-galaxy-note-7-explosion-problem.</cite>
 
-        <div id="scroll-indicator"></div>
-
-        <div id="footer-container">
+                        <br>
+                        <div id="extra-info-wrapper">
+                            <p>Extra Info: <a href="https://www.youtube.com/watch?v=PLu1MFIaR98">Samsung Issues Recall</a></p>
+                        </div>
+                    </div>
+                </article>
+            </main>
             <footer>
-                <p>haha</p>
+                <div id="actual-stuff">
+                    <p id="p1">Made by Yusuf Abdulahi</p>
+                    <p id="p2">Looking for the <a href="https://github.com/BigJella/Bad-Decisions-Project" target="_blank">source code</a>?</p>
+                </div>
+                <a id="return-link">
+                    <div class="cta hide" id="return-arrow"></div>
+                </a>
+                <div id="scroll-indicator"></div>
             </footer>
-        </div>
     </body>
 </html>
 
