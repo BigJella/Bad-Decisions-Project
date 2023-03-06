@@ -37,7 +37,7 @@ h2 {
 p {
     color: var(--primary-accent);
     font-family: "Prompt", sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 a {
@@ -136,7 +136,6 @@ header {
 
 #splash-text {
     width: 100%;
-    min-width: fit-content;
     height: var(--visible-content);
     position: relative;
     justify-content: center;
@@ -151,7 +150,7 @@ h1.typewriter {
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15rem;
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: 3.5rem;
 }
 
 .title-wrapper {
@@ -206,7 +205,7 @@ h1.typewriter {
 }
 
 #sub-heading {
-    font-size: 3rem;
+    font-size: 2.5rem;
     opacity: 0;
     height: 30%;
     display: flex;
@@ -285,11 +284,11 @@ h1.typewriter {
 }
 
 #article-1-image {
-    width: 60%;
+    width: 50%;
 }
 
 #article-1-text {
-    width: 40%;
+    width: 50%;
 }
 
 #article-2-image {
@@ -327,7 +326,7 @@ h1.typewriter {
 }
 
 #cited-wrapper > cite {
-    font-size : 1.2rem;
+    font-size : 1rem;
 }
 
 #extra-info-wrapper {
@@ -408,8 +407,30 @@ footer {
     z-index: 1;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
     html {
         font-size: 12px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    h1.typewriter {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    html {
+        font-size: 10px;
+    }
+
+    h1.typewriter {
+        font-size: 1.5rem;
     }
 }
